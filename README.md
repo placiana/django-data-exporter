@@ -8,8 +8,30 @@ Una app de Django reutilizable para previsualizar y exportar datos en múltiples
 - django-weasyprint (opcional, para PDF)
 
 ## Instalación
-1. Copia la carpeta `django_data_exporter` a tu proyecto.
-2. Agrega `django_data_exporter` a `INSTALLED_APPS` en `settings.py`.
+
+Puedes instalarlo directamente desde el repositorio de Git:
+
+```bash
+pip install git+https://github.com/placiana/django-data-exporter.git
+```
+
+O agregarlo a tu `requirements.txt`:
+```text
+django-data-exporter @ git+https://github.com/placiana/django-data-exporter.git
+```
+
+Si necesitas soporte para Excel o PDF, instala los extras:
+```bash
+pip install "django-data-exporter[xlsx,pdf] @ git+https://github.com/placiana/django-data-exporter.git"
+```
+
+Luego, agrega `django_data_exporter` a `INSTALLED_APPS` en tu `settings.py`:
+```python
+INSTALLED_APPS = [
+    ...
+    'django_data_exporter',
+]
+```
 
 ## Uso
 Hereda de `BaseDataExportView` y define los métodos necesarios:

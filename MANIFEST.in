@@ -1,0 +1,3 @@
+recursive-include django_data_exporter/static *
+recursive-include django_data_exporter/templates *
+include README.md
